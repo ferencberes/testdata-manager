@@ -1,0 +1,1912 @@
+
+#Parameters of the job:
+start time: 2014-10-01 16:54:29
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter1_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 16750
+
+
+#Parameters of the job:
+start time: 2014-10-01 16:54:59
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter1_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 18676
+
+
+#Parameters of the job:
+start time: 2014-10-01 16:55:31
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter1_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 18812
+
+
+#Parameters of the job:
+start time: 2014-10-01 16:56:03
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter1_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 18663
+
+
+#Parameters of the job:
+start time: 2014-10-01 16:56:35
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter1_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 22593
+
+
+#Parameters of the job:
+start time: 2014-10-01 16:57:11
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter2_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 32599
+
+
+#Parameters of the job:
+start time: 2014-10-01 16:57:56
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter2_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 36932
+
+
+#Parameters of the job:
+start time: 2014-10-01 16:58:46
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter2_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 54765
+
+
+#Parameters of the job:
+start time: 2014-10-01 16:59:54
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter2_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 32652
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:00:40
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter2_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 62966
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:01:57
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter3_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 20745
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:02:31
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter3_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 38690
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:03:23
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter3_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 38684
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:04:14
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter3_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 22690
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:04:50
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter3_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 46631
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:05:50
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter4_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 28619
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:06:32
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter4_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 20620
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:07:06
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter4_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 32779
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:07:52
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter4_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 50818
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:08:56
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter4_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 30916
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:09:40
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter5_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 28536
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:10:22
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter5_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 46763
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:11:22
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter5_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 26782
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:12:02
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter5_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 26603
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:12:42
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter5_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 52812
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:13:49
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter6_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 46875
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:14:49
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter6_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 18671
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:15:21
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter6_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 18668
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:15:52
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter6_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 20700
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:16:26
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter6_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 18857
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:16:58
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter7_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 22626
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:17:34
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter7_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 20701
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:18:08
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter7_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 20634
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:18:42
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter7_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 20581
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:19:16
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter7_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 22808
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:19:52
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter8_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 20549
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:20:26
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter8_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 20679
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:21:00
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter8_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 22662
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:21:36
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter8_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 20492
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:22:10
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter8_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 22845
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:22:46
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter9_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 54666
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:23:54
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter9_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 58791
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:25:06
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter9_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 20802
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:25:40
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter9_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 22841
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:26:17
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter9_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 20842
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:26:51
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter10_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 60802
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:28:05
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter10_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 48990
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:29:07
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter10_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 26719
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:29:47
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter10_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 46605
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:30:47
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2a.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2a.csv.txt_k10_iter10_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 34771
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:31:35
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter1_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 48756
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:32:36
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter1_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 26856
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:33:16
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter1_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 28574
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:33:58
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter1_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 26653
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:34:38
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter1_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 28763
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:35:20
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter2_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 42896
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:36:16
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter2_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 38782
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:37:08
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter2_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 40721
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:38:02
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter2_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 43037
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:38:58
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter2_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 50802
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:40:03
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter3_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 38573
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:40:54
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter3_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 24609
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:41:32
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter3_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 28574
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:42:14
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter3_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 26891
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:42:54
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter3_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 26593
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:43:34
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter4_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 40975
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:44:28
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter4_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 52685
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:45:34
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter4_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 46747
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:46:34
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter4_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 68630
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:47:56
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter4_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 50709
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:49:00
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter5_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 72739
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:50:26
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter5_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 62639
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:51:42
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter5_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 62919
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:52:58
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter5_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 66585
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:54:17
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter5_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 58549
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:55:29
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter6_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 58589
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:56:41
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter6_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 56629
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:57:51
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter6_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 102747
+
+
+#Parameters of the job:
+start time: 2014-10-01 17:59:47
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter6_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 66663
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:01:06
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter6_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 58701
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:02:18
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter7_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 66592
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:03:38
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter7_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 46621
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:04:38
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter7_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 62478
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:05:53
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter7_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 46636
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:06:53
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter7_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 40636
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:07:47
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter8_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 40647
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:08:41
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter8_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 40625
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:09:35
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter8_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 72733
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:11:01
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter8_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 70684
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:12:25
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter8_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 60549
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:13:39
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter9_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 104724
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:15:37
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter9_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 102746
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:17:34
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter9_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 102596
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:19:29
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter9_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 98515
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:21:21
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter9_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 78761
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:22:53
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter10_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 86640
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:24:33
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter10_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 102772
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:26:29
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter10_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 102663
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:28:25
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter10_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 88767
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:30:07
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2b.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2b.csv.txt_k10_iter10_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 86657
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:31:46
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter1_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 27811
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:32:27
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter1_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 27302
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:33:08
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter1_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 52175
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:34:13
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter1_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 47188
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:35:14
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter1_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 1
+program: AlsTuple
+Time taken: 53299
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:36:20
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter2_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 59286
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:37:33
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter2_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 57687
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:38:44
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter2_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 59084
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:39:56
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter2_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 84016
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:41:33
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter2_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 2
+program: AlsTuple
+Time taken: 43508
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:42:30
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter3_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 69027
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:43:52
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter3_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 91216
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:45:37
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter3_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 60043
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:46:50
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter3_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 100157
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:48:44
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter3_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 3
+program: AlsTuple
+Time taken: 74101
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:50:11
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter4_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 74311
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:51:39
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter4_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 56726
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:52:49
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter4_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 53542
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:53:56
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter4_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 45711
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:54:55
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter4_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 4
+program: AlsTuple
+Time taken: 54119
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:56:02
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter5_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 64011
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:57:19
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter5_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 45158
+
+
+#Parameters of the job:
+start time: 2014-10-01 18:58:18
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter5_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 109758
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:00:21
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter5_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 60977
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:01:35
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter5_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 5
+program: AlsTuple
+Time taken: 115024
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:03:43
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter6_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 109351
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:05:46
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter6_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 115803
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:07:55
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter6_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 132030
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:12:59
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter6_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 6
+program: AlsTuple
+Time taken: 91334
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:14:44
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter7_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 115853
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:16:53
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter7_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 65415
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:18:12
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter7_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 74013
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:19:39
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter7_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 97744
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:21:30
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter7_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 7
+program: AlsTuple
+Time taken: 170546
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:26:14
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter8_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 155630
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:29:03
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter8_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 150273
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:31:46
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter8_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 145408
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:34:25
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter8_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 8
+program: AlsTuple
+Time taken: 163269
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:37:22
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter9_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 125169
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:39:40
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter9_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 117851
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:41:51
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter9_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 95481
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:43:40
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter9_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 126314
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:45:59
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter9_5
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 9
+program: AlsTuple
+Time taken: 165400
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:48:58
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter10_1
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 133144
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:51:25
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter10_2
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 213640
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:55:11
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter10_3
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 183375
+
+
+#Parameters of the job:
+start time: 2014-10-01 19:58:28
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/sampledb2c.csv.txt
+q input: -
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40AlsTupleTest/AlsTuple_sampledb2c.csv.txt_k10_iter10_4
+numOfTasks: 40
+k: 10
+lambda: 0.01
+iter: 10
+program: AlsTuple
+Time taken: 193440
+
+

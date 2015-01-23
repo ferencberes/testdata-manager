@@ -1,0 +1,127 @@
+
+#Parameters of the als job:
+start time: 2015-01-23 10:32:59
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k10_iter1_1
+numOfTasks: 4
+k: 10
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 345089
+
+
+#Parameters of the als job:
+start time: 2015-01-23 10:38:49
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k10_iter1_2
+numOfTasks: 4
+k: 10
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 315314
+
+
+#Parameters of the als job:
+start time: 2015-01-23 10:44:09
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k10_iter1_3
+numOfTasks: 4
+k: 10
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 332795
+
+
+#Parameters of the als job:
+start time: 2015-01-23 10:49:47
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k10_iter1_4
+numOfTasks: 4
+k: 10
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 325053
+
+
+#Parameters of the als job:
+start time: 2015-01-23 10:55:16
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k10_iter1_5
+numOfTasks: 4
+k: 10
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 324546
+
+
+#Parameters of the als job:
+start time: 2015-01-23 11:00:46
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k20_iter1_1
+numOfTasks: 4
+k: 20
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 368450
+
+
+#Parameters of the als job:
+start time: 2015-01-23 11:06:59
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k20_iter1_2
+numOfTasks: 4
+k: 20
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 354440
+
+
+#Parameters of the als job:
+start time: 2015-01-23 11:12:58
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k20_iter1_3
+numOfTasks: 4
+k: 20
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 368398
+
+
+#Parameters of the als job:
+start time: 2015-01-23 11:19:11
+input file: hdfs://hadoop00:8020/user/multicast_test/inputs/sampledb2d.csv.txt
+output file: hdfs://hadoop00:8020/user/multicast_test/outputs/flink/als_test_d/AlsWithMap_sampledb2d.csv.txt_k20_iter1_4
+numOfTasks: 4
+k: 20
+lambda: 0.01
+iter: 1
+solver: jama
+program: AlsWithMap
+multicast_version: 0
+Time taken: 369248
+
+

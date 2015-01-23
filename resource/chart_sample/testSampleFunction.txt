@@ -1,0 +1,34 @@
+<html>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var timetaken = google.visualization.arrayToDataTable([
+#CHART1
+        ]);
+
+        var options_timetaken = {
+          //title: 'duma1',
+          hAxis: {title: 'Iterations'},
+          vAxis: {title: 'Average Runtime (min)'},
+		  curveType: 'function',
+          legend: 'right'
+        };
+	
+        var chart1 = new google.visualization.LineChart(document.getElementById('chart_div1'));
+        chart1.draw(timetaken, options_timetaken);
+      }
+    </script>
+	
+  </head>
+  <body>
+	<h1><center>ALS test sample</center></h1>
+#PARAM
+	<div id="teszt01">
+		<div id="chart_div1" style="width: 700px; height: 400px; float:left;"></div>
+	</div>
+  </body>
+</html>

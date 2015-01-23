@@ -1,0 +1,768 @@
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:43:36
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_1
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 58950
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:44:44
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_2
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 59227
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:45:52
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_3
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 56996
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:46:58
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_4
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 55045
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:48:02
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_5
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 77010
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:49:28
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_6
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 83274
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:51:01
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_7
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 71103
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:52:21
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_8
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 73172
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:53:43
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_9
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 71067
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:55:03
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter1_10
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 1
+program: CustomPageRank4
+Time taken: 69228
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:56:21
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_1
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 105306
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:58:16
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_2
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 87165
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-07 23:59:52
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_3
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 78985
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:01:20
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_4
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 87040
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:02:56
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_5
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 83212
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:04:28
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_6
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 129460
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:06:47
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_7
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 73087
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:08:09
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_8
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 67083
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:09:25
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_9
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 65257
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:10:39
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter2_10
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 2
+program: CustomPageRank4
+Time taken: 77141
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:12:05
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_1
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 93147
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:13:48
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_2
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 89335
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:15:26
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_3
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 91163
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:17:06
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_4
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 105179
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:19:00
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_5
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 107279
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:20:57
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_6
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 97272
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:22:43
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_7
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 99079
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:24:31
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_8
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 101137
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:26:22
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_9
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 101215
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:28:12
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter4_10
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 4
+program: CustomPageRank4
+Time taken: 86920
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:29:48
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_1
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 125150
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:32:02
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_2
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 121178
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:34:12
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_3
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 107232
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:36:08
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_4
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 110941
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:38:08
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_5
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 139136
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:40:36
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_6
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 137026
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:43:02
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_7
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 159189
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:45:51
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_8
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 129215
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:48:09
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_9
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 123306
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:50:22
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter6_10
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 6
+program: CustomPageRank4
+Time taken: 129301
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:52:40
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_1
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 163020
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:55:32
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_2
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 147148
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 00:58:09
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_3
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 131276
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:00:29
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_4
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 119205
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:02:37
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_5
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 155130
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:05:21
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_6
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 141324
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:07:51
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_7
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 153146
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:10:33
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_8
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 139428
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:14:51
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter8_10
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 8
+program: CustomPageRank4
+Time taken: 161150
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:17:41
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_1
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 205359
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:21:15
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_2
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 175166
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:24:20
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_3
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 169303
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:27:18
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_4
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 181647
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:30:28
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_5
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 201293
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:33:59
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_6
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 189508
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:37:17
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_7
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 163276
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:40:10
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_8
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 183297
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:43:22
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_9
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 169411
+
+
+#Parameters of the pagerank job:
+start time: 2014-10-08 01:46:21
+input file: hdfs://dell150:9000/user/fberes/flink/inputs/web-Google.csv.txt
+output file: hdfs://dell150:9000/user/fberes/flink/outputs/w40CustomPageRank4_webG_1-10x10/CustomPageRank4_web-Google.csv.txt_iter10_10
+numOfTasks: 40
+numberOfPartitions: 40
+epsilon: 0.85
+teleport: 1.0E-4
+iter: 10
+program: CustomPageRank4
+Time taken: 155252
+
+
