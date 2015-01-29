@@ -91,8 +91,8 @@ public class TestDataManagerRunner {
 				System.out.println("There is no such command");
 			}
 		} else if (args.length == 9) {
-			String chartName = (args[2].matches(".*.html") ? args[2]
-					: args[2] + ".html");
+			String chartName = (args[2].matches(".*.html") ? args[2] : args[2]
+					+ ".html");
 			String TableName = args[3];
 			String lambda = args[5];
 			String k = args[6];
@@ -100,7 +100,7 @@ public class TestDataManagerRunner {
 			LinkedList<Integer> numTasks = new LinkedList<Integer>();
 			LinkedList<String> iterations = new LinkedList<>();
 			String[] iters = args[7].split(":");
-			
+
 			if (args[1].equals("als")) {
 				String qInput = args[4];
 				for (int i = 0; i < iters.length; i++) {
@@ -132,7 +132,7 @@ public class TestDataManagerRunner {
 				if (dbm.existsTable(TableName)) {
 					cam.generateCharts(chartName, labels, times, deviations);
 				}
-			} else if(args[1].equals("multicast_als")) {
+			} else if (args[1].equals("multicast_als")) {
 				String solver = args[4];
 				for (int i = 0; i < iters.length; i++) {
 					iterations.add(iters[i]);
@@ -154,12 +154,12 @@ public class TestDataManagerRunner {
 					times.add(new LinkedList<Double>());
 					deviations.add(new LinkedList<Double>());
 				}
-				MulticastAlsConnection.getMulticastAlsRuntimeData(dbm, TableName, inputs, mc_versions, solver,
-						k, lambda, iterations, numTasks, programs, times,
-						labels);
-				MulticastAlsConnection.getMulticastAlsDeviationMultipleInput(dbm, TableName,
-						inputs, mc_versions, solver, k, lambda, iterations, numTasks,
-						programs, deviations);
+				MulticastAlsConnection.getMulticastAlsRuntimeData(dbm,
+						TableName, inputs, mc_versions, solver, k, lambda,
+						iterations, numTasks, programs, times, labels);
+				MulticastAlsConnection.getMulticastAlsDeviationMultipleInput(
+						dbm, TableName, inputs, mc_versions, solver, k, lambda,
+						iterations, numTasks, programs, deviations);
 
 				if (dbm.existsTable(TableName)) {
 					cam.generateCharts(chartName, labels, times, deviations);

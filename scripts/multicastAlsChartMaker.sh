@@ -28,7 +28,7 @@ iterations=1
 
 if [ "$#" == "0" ]; then
   pushd "$thisDir"
-  java -classpath ./../../target/testdata-manager-0.1-jar-with-dependencies.jar "$classPath" "$mainDir" multicast_als "$chartName" "$tableName" "$solver" "$lmb" "$k_feature" "$iterations" "$programs"
+  java -classpath ./../../target/testdata-manager-0.1-jar-with-dependencies.jar "$classPath" "$mainDir"chart multicast_als "$chartName" "$tableName" "$solver" "$lmb" "$k_feature" "$iterations" "$programs"
   popd
 else
   echo "Parameters must be set inside the scripts!"

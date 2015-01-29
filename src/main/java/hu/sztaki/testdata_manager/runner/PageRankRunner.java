@@ -1,44 +1,47 @@
 package hu.sztaki.testdata_manager.runner;
 
 import hu.sztaki.testdata_manager.chartapi.ChartApiManager;
+import hu.sztaki.testdata_manager.dbmanager.AlsConnection;
 import hu.sztaki.testdata_manager.dbmanager.DbManager;
 import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection2;
+import hu.sztaki.testdata_manager.dbmanager.PageRankConnection;
+import hu.sztaki.testdata_manager.dbmanager.PageRankConnection2;
+
 import java.util.LinkedList;
 
-public class MulticastAlsRunner extends TestRunner {
+public class PageRankRunner extends TestRunner {
 
 	public static void run(String[] args, DbManager dm) {
 
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);
 
-		MulticastAlsConnection2 mc_als_conn = new MulticastAlsConnection2(dm);
+		PageRankConnection2 pagerank_conn = new PageRankConnection2(dm);
 		ChartApiManager cam = new ChartApiManager();
 
 		// create table
 		if (args[1].equals("create")) {
 			if (args[3].equals("-")) {
-				mc_als_conn.createTable("");
+				pagerank_conn.createTable("");
 			} else {
-				mc_als_conn.createTable(args[3]);
+				pagerank_conn.createTable(args[3]);
 			}
 			// insert table
 		} else if (args[1].equals("insert")) {
-			mc_als_conn.insertData(args[3]);
+			pagerank_conn.insertData(args[3]);
 
 		} else if (args[1].equals("chart")) {
-			if (args.length == 10) {
+			if (args.length == 9) {
+
 				String chartName = (args[3].matches(".*.html") ? args[3]
 						: args[3] + ".html");
 				String TableName = args[4];
-				String solver = args[5];
-				String lambda = args[6];
-				String k = args[7];
+				String dampening = args[5];
+				String epsilon = args[6];
 
 				LinkedList<Integer> numTasks = new LinkedList<Integer>();
 				LinkedList<String> iterations = new LinkedList<>();
-				String[] iters = args[8].split(":");
-
+				String[] iters = args[7].split(":");
 				for (int i = 0; i < iters.length; i++) {
 					iterations.add(iters[i]);
 				}
@@ -48,24 +51,23 @@ public class MulticastAlsRunner extends TestRunner {
 				times.add(new LinkedList<Double>());
 				deviations.add(new LinkedList<Double>());
 
-				String[] testData = args[9].split("\\|");
+				String[] testData = args[8].split("\\|");
 				for (String i : testData) {
-					// System.out.println(i);
+					System.out.println(i);
 					programs.add(i.split(":")[0]);
 					labels.add(i.split(":")[0]);
 					numTasks.add(Integer.parseInt(i.split(":")[1]));
 					inputs.add(i.split(":")[2]);
-					mc_versions.add(i.split(":")[3]);
 					times.add(new LinkedList<Double>());
 					deviations.add(new LinkedList<Double>());
 				}
-				mc_als_conn.getMulticastAlsRuntimeData(TableName, inputs,
-						mc_versions, solver, k, lambda, iterations, numTasks,
-						programs, times, labels);
-				mc_als_conn.getMulticastAlsDeviationMultipleInput(TableName,
-						inputs, mc_versions, solver, k, lambda, iterations,
-						numTasks, programs, deviations);
 
+				pagerank_conn.getPageRankRuntimeData(TableName, inputs,
+						dampening, epsilon, iterations, numTasks, programs,
+						times, labels);
+				pagerank_conn.getPageRankDeviationMultipleInput(TableName,
+						inputs, dampening, epsilon, iterations, numTasks,
+						programs, deviations);
 				if (dm.existsTable(TableName)) {
 					cam.generateCharts(chartName, labels, times, deviations);
 				}

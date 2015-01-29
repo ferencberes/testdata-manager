@@ -49,7 +49,11 @@ public class TestRunner {
 			}
 		} else {
 			if (args[2].equals("multicast_als")) {
-				MulticastAlsRunner.runMulticastAlsTest(args, dm);
+				MulticastAlsRunner.run(args, dm);
+			} else if (args[2].equals("als")) {
+				AlsRunner.run(args, dm);
+			} else if (args[2].equals("pagerank")) {
+				PageRankRunner.run(args, dm);
 			} else {
 				System.out
 						.println("Only als and pagerank options are available");

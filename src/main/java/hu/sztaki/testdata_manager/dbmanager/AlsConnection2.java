@@ -1,10 +1,5 @@
 package hu.sztaki.testdata_manager.dbmanager;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,115 +8,70 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-public class MulticastAlsConnection2 extends DatabaseConnection {
+public class AlsConnection2 extends DatabaseConnection {
 
-	// TODO: this function is not used yet!!!
-	// this map stores which variable is fixed in the sql queries
-	private static final Map<String, Boolean> VARIABLES;
-	static {
-		VARIABLES = new HashMap<String, Boolean>();
-		VARIABLES.put("input", true);
-		VARIABLES.put("output", true);
-		VARIABLES.put("solver", true);
-		VARIABLES.put("numoftasks", true);
-		VARIABLES.put("lambda", false);
-		VARIABLES.put("feature_k", false);
-		VARIABLES.put("iterations", false);
-		VARIABLES.put("program", true);
-		VARIABLES.put("mc_version", false);
-		VARIABLES.put("time_taken", false);
-	}
-
-	public MulticastAlsConnection2(DbManager dm) {
+	public AlsConnection2(DbManager dm) {
 		super(dm);
-	}
-
-	public String getFixedWhereClausePart(
-			LinkedList<String> fixedVariableNames,
-			LinkedList<String> fixedVariableValues) {
-		String out = "";
-		String fixedVar;
-		int numberOfFixedVariables = fixedVariableNames.size();
-		try {
-			for (int i = 0; i < numberOfFixedVariables; i++) {
-				fixedVar = fixedVariableNames.get(i);
-				if (VARIABLES.get(fixedVar) == null) {
-					throw new IllegalArgumentException(
-							"There is no such variable as " + fixedVar);
-				}
-				out += fixedVar + "=";
-				out += (VARIABLES.get(fixedVar) ? "'" : "");
-				out += fixedVariableValues.get(i);
-				out += (VARIABLES.get(fixedVar) ? "'" : "");
-				out += " and ";
-			}
-		} catch (IllegalArgumentException iae) {
-			iae.printStackTrace();
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		} finally {
-			return out;
-		}
 	}
 
 	public void createTable(String tableName) {
 		// NOTE: if tableName is not given then a daily table is created!
-		String tableToInsert = (tableName.equals("") ? "MULTICAST_ALS_TEST_"
+		String tableToInsert = (tableName.equals("") ? "ALS_TEST_"
 				+ dm.queryDate() : tableName);
 		// TODO: check whether table exist if yes, then stdout some msg
 
 		String queryCreate = "CREATE TABLE IF NOT EXISTS "
 				+ tableToInsert
-				+ "(ID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, START_TIME DATE NOT NULL, INPUT VARCHAR(200) NOT NULL, OUTPUT VARCHAR(200), SOLVER VARCHAR(10), NUMOFTASKS INTEGER, LAMBDA DOUBLE, FEATURE_K INTEGER NOT NULL, ITERATIONS INTEGER, PROGRAM VARCHAR(50) NOT NULL, MC_VERSION INTEGER,TIME_TAKEN INTEGER, CONSTRAINT "
+				+ "(ID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, START_TIME DATE NOT NULL, INPUT VARCHAR(200) NOT NULL, OUTPUT VARCHAR(200), Q_INPUT VARCHAR(200), NUMOFTASKS INTEGER, LAMBDA DOUBLE, FEATURE_K INTEGER NOT NULL, ITERATIONS INTEGER, PROGRAM VARCHAR(50) NOT NULL, TIME_TAKEN INTEGER, CONSTRAINT "
 				+ tableToInsert + "_PK PRIMARY KEY( ID ))";
-		createTable(tableToInsert, queryCreate, "Multicast Als");
+		createTable(tableToInsert, queryCreate, "Als");
 	}
 
 	public void insertData(String tableName) {
 		String insertQuery = "insert into "
 				+ tableName
-				+ "(START_TIME,INPUT,OUTPUT,SOLVER,NUMOFTASKS,LAMBDA,FEATURE_K,ITERATIONS,PROGRAM,MC_VERSION,TIME_TAKEN)"
-				+ " values (str_to_date(?,'%Y-%m-%d %T'),?,?,?,?,?,?,?,?,?,?)";
-		insertData(tableName, insertQuery, "#Parameters of the als job:", 11);
+				+ "(START_TIME,INPUT,OUTPUT,Q_INPUT,NUMOFTASKS,LAMBDA,FEATURE_K,ITERATIONS,PROGRAM,TIME_TAKEN)"
+				+ " values (str_to_date(?,'%Y-%m-%d %T'),?,?,?,?,?,?,?,?,?)";
+		insertData(tableName, insertQuery, "#Parameters of the job:", 10);
 	}
 
 	@Override
 	public void parseLines(String[] parameters, PreparedStatement insertData) {
 		try {
 			String[] inputTokens = parameters[1].split("/");
+			String[] qTokens = parameters[2].split("/");
 
-			insertData.setString(1, parameters[0]);
+			insertData.setString(1, parameters[0]);// start_time
 			insertData.setString(2, inputTokens[inputTokens.length - 1]);// input
-			insertData.setString(3, parameters[2]);// output
-			insertData.setInt(5, Integer.parseInt(parameters[3]));// #subtasks
-			insertData.setString(4, parameters[7]);// solver
-			insertData.setDouble(6, Double.parseDouble(parameters[5]));// lambda
-			insertData.setInt(7, Integer.parseInt(parameters[4]));// k
+			insertData.setString(3, parameters[3]);// output
+			insertData.setString(4, qTokens[qTokens.length - 1]);// q
+																	// input
+			insertData.setInt(5, Integer.parseInt(parameters[4]));// #subtasks
+			insertData.setDouble(6, Double.parseDouble(parameters[6]));// lambda
+			insertData.setInt(7, Integer.parseInt(parameters[5]));// k
 																	// feature
-			insertData.setInt(8, Integer.parseInt(parameters[6]));// #iteration
+			insertData.setInt(8, Integer.parseInt(parameters[7]));// #iteration
 			insertData.setString(9, parameters[8]);// program
-			insertData.setInt(10, Integer.parseInt(parameters[9]));// mc_version
-			if (!parameters[10].equals("-")) {// time taken
-				insertData.setInt(11, Integer.parseInt(parameters[10]));
+			if (!parameters[9].equals("-")) {// time taken
+				insertData.setInt(10, Integer.parseInt(parameters[9]));
 			} else {
-				insertData.setNull(11, java.sql.Types.NULL);
+				insertData.setNull(10, java.sql.Types.NULL);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void getMulticastAlsRuntimeData(String tableName,
-			LinkedList<String> inputs, LinkedList<String> mc_versions,
-			String solver, String k, String lambda,
+	public void getAlsRuntimeData(String tableName, LinkedList<String> inputs,
+			String qInput, String k, String lambda,
 			LinkedList<String> iterations, LinkedList<Integer> numOfTasks,
 			LinkedList<String> programs, LinkedList<LinkedList<Double>> times,
 			LinkedList<String> labels) throws RuntimeException {
 
 		if (dm.existsTable(tableName)) {
 
-			String whereFromClause = " from " + tableName + " where  solver='"
-					+ solver + "'" + " and feature_k=" + k + " and lambda="
+			String whereFromClause = " from " + tableName + " where  q_input='"
+					+ qInput + "'" + " and feature_k=" + k + " and lambda="
 					+ lambda + " and (";
 
 			for (int s = 0; s < iterations.size(); s++) {
@@ -137,24 +87,24 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 			String programName = "";
 			String numTaskCount = "";
 			String inputName = "";
-			String mc_version = "";
 			try {
 				for (int index = 0; index < numOfTasks.size(); index++) {
 					timesQuery = "select iterations,avg(time_taken) ";
 					programName = programs.get(index + 1);
 					numTaskCount = numOfTasks.get(index).toString();
 					inputName = inputs.get(index);
-					mc_version = mc_versions.get(index);
 					timesQuery = timesQuery + whereFromClause
 							+ " and program='" + programName + "' and"
 							+ " numoftasks=" + numTaskCount + " and input='"
-							+ inputName + "' and mc_version=" + mc_version
+							+ inputName + "'"
 							+ " group by iterations order by iterations asc";
 					System.out.println(timesQuery + "\n");
 
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
+					// int numOfIter = 0;
 					while (rs.next()) {
+						// numOfIter++;
 						labels.set(index + 1, programName + ": " + numTaskCount
 								+ " subTasks, " + inputName);
 						times.get(index + 1).add(rs.getDouble(2) / 1000 / 60);
@@ -179,17 +129,16 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 		}
 	}
 
-	public void getMulticastAlsDeviationMultipleInput(String tableName,
-			LinkedList<String> inputs, LinkedList<String> mc_versions,
-			String solver, String k, String lambda,
+	public void getAlsDeviationMultipleInput(String tableName,
+			LinkedList<String> inputs, String qInput, String k, String lambda,
 			LinkedList<String> iterations, LinkedList<Integer> numOfTasks,
 			LinkedList<String> programs,
 			LinkedList<LinkedList<Double>> deviations) throws RuntimeException {
 
 		if (dm.existsTable(tableName)) {
 
-			String whereFromClause = " from " + tableName + " where  solver='"
-					+ solver + "'" + " and feature_k=" + k + " and lambda="
+			String whereFromClause = " from " + tableName + " where  q_input='"
+					+ qInput + "'" + " and feature_k=" + k + " and lambda="
 					+ lambda + " and (";
 
 			for (int s = 0; s < iterations.size(); s++) {
@@ -205,18 +154,16 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 			String programName = "";
 			String numTaskCount = "";
 			String inputName = "";
-			String mc_version = "";
 			try {
 				for (int index = 0; index < numOfTasks.size(); index++) {
 					timesQuery = "select iterations,stddev(time_taken) ";
 					programName = programs.get(index + 1);
 					numTaskCount = numOfTasks.get(index).toString();
 					inputName = inputs.get(index);
-					mc_version = mc_versions.get(index);
 					timesQuery = timesQuery + whereFromClause
 							+ " and program='" + programName + "' and"
 							+ " numoftasks=" + numTaskCount + " and input='"
-							+ inputName + "' and mc_version=" + mc_version
+							+ inputName + "'"
 							+ " group by iterations order by iterations asc";
 					System.out.println(timesQuery + "\n");
 

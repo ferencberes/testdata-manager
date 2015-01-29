@@ -19,7 +19,7 @@ iterations=10
 
 if [ "$#" == "0" ]; then
   pushd "$thisDir"
-  java -classpath ./../target/testdata-manager-0.1-jar-with-dependencies.jar "$classPath" "$mainDir" pagerank "$chartName" "$tableName" "$dampening" "$epsilon" "$iterations" "$programs"
+  java -classpath ./../target/testdata-manager-0.1-jar-with-dependencies.jar "$classPath" "$mainDir" chart pagerank "$chartName" "$tableName" "$dampening" "$epsilon" "$iterations" "$programs"
   popd
 else
   echo "Parameters must be set inside the scripts!"
