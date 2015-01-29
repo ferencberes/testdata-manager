@@ -34,8 +34,7 @@ public class TestDataManagerRunner {
 
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);
-		DbManager.loadDBParameters(DB_CONFIG_DIR);
-		DbManager dbm = new DbManager();
+		DbManager dbm = new DbManager(DB_CONFIG_DIR);
 		ChartApiManager cam = new ChartApiManager();
 
 		if (args.length == 2) {

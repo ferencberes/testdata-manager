@@ -31,6 +31,10 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 		VARIABLES.put("mc_version", false);
 		VARIABLES.put("time_taken", false);
 	}
+	
+	public MulticastAlsConnection2(DbManager dm) {
+		super(dm);
+	}
 
 	public String getFixedWhereClausePart(
 			LinkedList<String> fixedVariableNames,
@@ -60,10 +64,10 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 		}
 	}
 
-	public void createMulticastAlsTable(String tableName) {
+	public void createTable(String tableName) {
 		// NOTE: if tableName is not given then a daily table is created!
 		String tableToInsert = (tableName.equals("") ? "MULTICAST_ALS_TEST_"
-				+ this.queryDate() : tableName);
+				+ dm.queryDate() : tableName);
 		// TODO: check whether table exist if yes, then stdout some msg
 
 		String queryCreate = "CREATE TABLE IF NOT EXISTS "
@@ -114,7 +118,7 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 			LinkedList<String> programs, LinkedList<LinkedList<Double>> times,
 			LinkedList<String> labels) throws RuntimeException {
 
-		if (this.existsTable(tableName)) {
+		if (dm.existsTable(tableName)) {
 
 			String whereFromClause = " from " + tableName + " where  solver='"
 					+ solver + "'" + " and feature_k=" + k + " and lambda="
@@ -148,7 +152,7 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 							+ " group by iterations order by iterations asc";
 					System.out.println(timesQuery + "\n");
 
-					st = this.getCON().createStatement();
+					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
 					while (rs.next()) {
 						labels.set(index + 1, programName + ": " + numTaskCount
@@ -182,7 +186,7 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 			LinkedList<String> programs,
 			LinkedList<LinkedList<Double>> deviations) throws RuntimeException {
 
-		if (this.existsTable(tableName)) {
+		if (dm.existsTable(tableName)) {
 
 			String whereFromClause = " from " + tableName + " where  solver='"
 					+ solver + "'" + " and feature_k=" + k + " and lambda="
@@ -216,7 +220,7 @@ public class MulticastAlsConnection2 extends DatabaseConnection {
 							+ " group by iterations order by iterations asc";
 					System.out.println(timesQuery + "\n");
 
-					st = this.getCON().createStatement();
+					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
 					while (rs.next()) {
 						deviations.get(index + 1).add(rs.getDouble(2) / 1000);

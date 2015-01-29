@@ -1,5 +1,6 @@
 package hu.sztaki.testdata_manager.runner;
 
+import hu.sztaki.testdata_manager.dbmanager.DbManager;
 import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection2;
 
 import java.util.LinkedList;
@@ -20,33 +21,39 @@ public class TestRunner {
 	protected static LinkedList<String> labels = new LinkedList<String>();
 	protected static LinkedList<LinkedList<Double>> times = new LinkedList<LinkedList<Double>>();
 	protected static LinkedList<LinkedList<Double>> deviations = new LinkedList<LinkedList<Double>>();
-	
+
 	public static void main(String[] args) {
 		DB_CONFIG_DIR = args[0] + "/config";
 		CHART_TARGET_PATH = args[0] + "/charts";
 		CHART_SAMPLE_PATH = args[0] + "/resource/chart_sample";
 
+		DbManager dm = new DbManager(DB_CONFIG_DIR);
+
+		/*
+		 * arg[1] options: list create drop chart
+		 */
+
 		if (args.length == 2) {
 			// list tables
 			if (args[1].equals("list")) {
-				//TODO: DatabaseConnection should be called but it is abstract!!!
-				System.out.println(new MulticastAlsConnection2().queryTables());
+				System.out.println(dm.queryTables());
 			} else {
 				System.out.println("There is no such command");
 			}
 		} else if (args.length == 3) {
 			// drop table
 			if (args[1].equals("drop")) {
-				//TODO: DatabaseConnection should be called but it is abstract!!!
-				new MulticastAlsConnection2().dropTable(args[2]);
+				dm.dropTable(args[2]);
 			} else {
 				System.out.println("There is no such command");
 			}
 		} else {
-			if(args[2].equals("multicast_als")) {
-				MulticastAlsRunner.runMulticastAlsTest(args);
+			if (args[2].equals("multicast_als")) {
+				MulticastAlsRunner.runMulticastAlsTest(args, dm);
+			} else {
+				System.out
+						.println("Only als and pagerank options are available");
 			}
 		}
-
 	}
 }

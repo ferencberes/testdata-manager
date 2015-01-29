@@ -5,44 +5,40 @@ import hu.sztaki.testdata_manager.dbmanager.DbManager;
 import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection2;
 import java.util.LinkedList;
 
-public class MulticastAlsRunner extends TestRunner{
+public class MulticastAlsRunner extends TestRunner {
 
-	public static void runMulticastAlsTest(String[] args) {
+	public static void runMulticastAlsTest(String[] args, DbManager dm) {
 
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);
-		DbManager.loadDBParameters(DB_CONFIG_DIR);
-		MulticastAlsConnection2 dbm = new MulticastAlsConnection2();
+
+		MulticastAlsConnection2 mc_als_conn = new MulticastAlsConnection2(dm);
 		ChartApiManager cam = new ChartApiManager();
 
-		if (args.length == 4) {
-			// create table
-			if (args[1].equals("create")) {
-				if (args[3].equals("-")) {
-					dbm.createMulticastAlsTable("");
-				} else {
-					dbm.createMulticastAlsTable(args[3]);
-				}
-			// insert table
-			} else if (args[1].equals("insert")) {
-				dbm.insertData(args[3]);
-
+		// create table
+		if (args[1].equals("create")) {
+			if (args[3].equals("-")) {
+				mc_als_conn.createTable("");
 			} else {
-				System.out.println("There is no such command");
+				mc_als_conn.createTable(args[3]);
 			}
-		} else if (args.length == 9) {
-			String chartName = (args[2].matches(".*.html") ? args[2]
-					: args[2] + ".html");
-			String TableName = args[3];
-			String lambda = args[5];
-			String k = args[6];
+			// insert table
+		} else if (args[1].equals("insert")) {
+			mc_als_conn.insertData(args[3]);
 
-			LinkedList<Integer> numTasks = new LinkedList<Integer>();
-			LinkedList<String> iterations = new LinkedList<>();
-			String[] iters = args[7].split(":");
-			
-			if(args[1].equals("multicast_als")) {
-				String solver = args[4];
+		} else if (args[1].equals("chart")) {
+			if (args.length == 10) {
+				String chartName = (args[3].matches(".*.html") ? args[3]
+						: args[3] + ".html");
+				String TableName = args[4];
+				String solver = args[5];
+				String lambda = args[6];
+				String k = args[7];
+
+				LinkedList<Integer> numTasks = new LinkedList<Integer>();
+				LinkedList<String> iterations = new LinkedList<>();
+				String[] iters = args[8].split(":");
+		
 				for (int i = 0; i < iters.length; i++) {
 					iterations.add(iters[i]);
 				}
@@ -52,7 +48,7 @@ public class MulticastAlsRunner extends TestRunner{
 				times.add(new LinkedList<Double>());
 				deviations.add(new LinkedList<Double>());
 
-				String[] testData = args[8].split("\\|");
+				String[] testData = args[9].split("\\|");
 				for (String i : testData) {
 					// System.out.println(i);
 					programs.add(i.split(":")[0]);
@@ -63,14 +59,14 @@ public class MulticastAlsRunner extends TestRunner{
 					times.add(new LinkedList<Double>());
 					deviations.add(new LinkedList<Double>());
 				}
-				dbm.getMulticastAlsRuntimeData(TableName, inputs, mc_versions, solver,
-						k, lambda, iterations, numTasks, programs, times,
-						labels);
-				dbm.getMulticastAlsDeviationMultipleInput(TableName,
-						inputs, mc_versions, solver, k, lambda, iterations, numTasks,
-						programs, deviations);
+				mc_als_conn.getMulticastAlsRuntimeData(TableName, inputs,
+						mc_versions, solver, k, lambda, iterations, numTasks,
+						programs, times, labels);
+				mc_als_conn.getMulticastAlsDeviationMultipleInput(TableName,
+						inputs, mc_versions, solver, k, lambda, iterations,
+						numTasks, programs, deviations);
 
-				if (dbm.existsTable(TableName)) {
+				if (dm.existsTable(TableName)) {
 					cam.generateCharts(chartName, labels, times, deviations);
 				}
 			} else {
@@ -80,7 +76,7 @@ public class MulticastAlsRunner extends TestRunner{
 			}
 
 		} else {
-			System.out.println("Only als and pagerank options are available");
+			System.out.println("There is no such command");
 		}
 	}
 }

@@ -2,7 +2,8 @@
 
 thisDir="$(dirname $0)"
 thisDir="$(readlink -f "$thisDir")"
-classPath=hu.sztaki.testdata_manager.runner.TestDataManagerRunner
+#classPath=hu.sztaki.testdata_manager.runner.TestDataManagerRunner
+classPath=hu.sztaki.testdata_manager.runner.TestRunner
 
 mainDir="$(dirname "$thisDir")"
 mainDir="$(readlink -f "$mainDir")"

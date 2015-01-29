@@ -15,25 +15,23 @@ import java.util.Set;
 
 public class DbManager {
 
+	//TODO: should I introduce final or static members?
 	private Connection CON;
-	private static String CONFIG_DIR;
-	private static String DB_USER;
-	private static String DB_PASSWD;
-	private static String DB_HOST;
-	private static int DB_PORT;
-	private static String DB_NAME;
-	private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	private static File LOGDIR;
-
-	public static void loadDBParameters(String configDir) {
-		CONFIG_DIR = configDir;
-	}
+	private String CONFIG_DIR;
+	private String DB_USER;
+	private String DB_PASSWD;
+	private String DB_HOST;
+	private int DB_PORT;
+	private String DB_NAME;
+	private String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	private File LOGDIR;
 	
-	public DbManager() {
-		CON = configure(CONFIG_DIR);
+	public DbManager(String configDir) {
+		CONFIG_DIR = configDir;
+		CON = configure();
 	}
 
-	public Connection configure(String confDir) {
+	private Connection configure() {
 		BufferedReader br_mysql = null;
 		BufferedReader br_filePath = null;
 		File mysqlConfig = null;
@@ -42,9 +40,9 @@ public class DbManager {
 		String line = "";
 
 		try {
-			File configDir = new File(confDir);
+			File configDir = new File(CONFIG_DIR);
 			if (!configDir.isDirectory()) {
-				throw new IllegalArgumentException("'" + confDir
+				throw new IllegalArgumentException("'" + CONFIG_DIR
 						+ "' is not a directory!");
 			}
 
@@ -235,7 +233,7 @@ public class DbManager {
 		}
 	}
 	
-	public static File getLOGDIR() {
+	public File getLOGDIR() {
 		return LOGDIR;
 	}
 
