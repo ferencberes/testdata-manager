@@ -1,7 +1,7 @@
 package hu.sztaki.testdata_manager.runner;
 
 import hu.sztaki.testdata_manager.dbmanager.DbManager;
-import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection2;
+import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection;
 
 import java.util.LinkedList;
 

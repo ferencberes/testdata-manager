@@ -1,7 +1,7 @@
 package hu.sztaki.testdata_manager.runner;
 
 import hu.sztaki.testdata_manager.chartapi.ChartApiManager;
-import hu.sztaki.testdata_manager.dbmanager.AlsConnection2;
+import hu.sztaki.testdata_manager.dbmanager.AlsConnection;
 import hu.sztaki.testdata_manager.dbmanager.DbManager;
 
 
@@ -14,7 +14,7 @@ public class AlsRunner extends TestRunner {
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);
 
-		AlsConnection2 als_conn = new AlsConnection2(dm);
+		AlsConnection als_conn = new AlsConnection(dm);
 		ChartApiManager cam = new ChartApiManager();
 
 		// create table

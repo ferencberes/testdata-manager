@@ -2,7 +2,7 @@ package hu.sztaki.testdata_manager.runner;
 
 import hu.sztaki.testdata_manager.chartapi.ChartApiManager;
 import hu.sztaki.testdata_manager.dbmanager.DbManager;
-import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection2;
+import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection;
 import java.util.LinkedList;
 
 public class MulticastAlsRunner extends TestRunner {
@@ -12,7 +12,7 @@ public class MulticastAlsRunner extends TestRunner {
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);
 
-		MulticastAlsConnection2 mc_als_conn = new MulticastAlsConnection2(dm);
+		MulticastAlsConnection mc_als_conn = new MulticastAlsConnection(dm);
 		ChartApiManager cam = new ChartApiManager();
 
 		// create table

@@ -9,137 +9,62 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
-public class PageRankConnection {
+public class PageRankConnection extends DatabaseConnection {
 
-	public static void createPageRankTable(DbManager dbm, String tableName) {
-		Statement createTable = null;
-		ResultSet rs = null;
-		String queryCreate = "";
-
-		// NOTE: if tbaleName is not given then a daily table is created!
-		String tableToInsert = (tableName.equals("") ? "PAGERANK_TEST_"
-				+ dbm.queryDate() : tableName);
-		// TODO: check whether table exist if yes, then stdout some msg
-
-		try {
-			createTable = dbm.getCON().createStatement();
-			queryCreate = "CREATE TABLE IF NOT EXISTS "
-					+ tableToInsert
-					+ "(ID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, START_TIME DATE NOT NULL, INPUT VARCHAR(200) NOT NULL, OUTPUT VARCHAR(200), NUMOFTASKS INTEGER, NUMOFSUPERNODES INTEGER, DAMPENING DOUBLE, EPSILON DOUBLE, ITERATIONS INTEGER, PROGRAM VARCHAR(50) NOT NULL, TIME_TAKEN INTEGER, CONSTRAINT "
-					+ tableToInsert + "_PK PRIMARY KEY( ID ))";
-			// System.out.println(queryCreate);
-			createTable.executeUpdate(queryCreate);
-			System.out.println("PageRank Table is created.");
-
-		} catch (SQLException sex) {
-			sex.printStackTrace();
-		} finally {
-			try {
-				if (createTable != null) {
-					createTable.close();
-				}
-				if (rs != null) {
-					rs.close();
-				}
-			} catch (SQLException sex2) {
-				sex2.printStackTrace();
-			}
-		}
+	public PageRankConnection(DbManager dm) {
+		super(dm);
 	}
 
-	public static void insertPageRankData(DbManager dbm, String tableName) {
-		BufferedReader br = null;
-		ResultSet rs = null;
-		PreparedStatement insertData = null;
+	public void createTable(String tableName) {
+		// NOTE: if tableName is not given then a daily table is created!
+		String tableToInsert = (tableName.equals("") ? "MULTICAST_ALS_TEST_"
+				+ dm.queryDate() : tableName);
+		// TODO: check whether table exist if yes, then stdout some msg
 
-		String insertTest = "insert into "
+		String queryCreate = "CREATE TABLE IF NOT EXISTS "
+				+ tableToInsert
+				+ "(ID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, START_TIME DATE NOT NULL, INPUT VARCHAR(200) NOT NULL, OUTPUT VARCHAR(200), NUMOFTASKS INTEGER, NUMOFSUPERNODES INTEGER, DAMPENING DOUBLE, EPSILON DOUBLE, ITERATIONS INTEGER, PROGRAM VARCHAR(50) NOT NULL, TIME_TAKEN INTEGER, CONSTRAINT "
+				+ tableToInsert + "_PK PRIMARY KEY( ID ))";
+		createTable(tableToInsert, queryCreate, "PageRank");
+	}
+
+	public void insertData(String tableName) {
+		String insertQuery = "insert into "
 				+ tableName
 				+ "(START_TIME,INPUT,OUTPUT,NUMOFTASKS, NUMOFSUPERNODES,DAMPENING,EPSILON,ITERATIONS,PROGRAM,TIME_TAKEN)"
 				+ " values (str_to_date(?,'%Y-%m-%d %T'),?,?,?,?,?,?,?,?,?)";
+		insertData(tableName, insertQuery, "#Parameters of the als job:", 10);
+	}
 
-		int numOfParams = 10;
-
-		String line = "";
-		String[] actualLog;
-		String[] parameters = new String[numOfParams];
-
+	@Override
+	public void parseLines(String[] parameters, PreparedStatement insertData) {
 		try {
-			File[] logs = dbm.getLOGDIR().listFiles();
+			String[] inputTokens = parameters[1].split("/");
 
-			// NOTE: suppose that in logDir there are only new logs
-			for (File i : logs) {
-				System.out.println(i.getCanonicalPath());
-				br = new BufferedReader(new FileReader(i));
-				insertData = dbm.getCON().prepareStatement(insertTest);
-				while ((line = br.readLine()) != null) {
-					if (line.matches("#Parameters of the pagerank job:")) {
-						actualLog = new String[numOfParams];
-						for (int j = 0; j < numOfParams; j++) {
-							line = br.readLine();
-							actualLog[j] = line;
-							if (j == numOfParams - 1
-									&& !line.matches("Time\\staken.*")) {
-								parameters[j] = "-";
-							} else {
-								parameters[j] = line.split(": ")[1];
-							}
-						}
-
-						String[] inputTokens = parameters[1].split("/");
-
-						insertData.setString(1, parameters[0]);// start_time
-						insertData.setString(2,
-								inputTokens[inputTokens.length - 1]);// input
-						insertData.setString(3, parameters[2]);// output
-						insertData.setInt(4, Integer.parseInt(parameters[3]));// #subtasks
-						insertData.setInt(5, Integer.parseInt(parameters[4]));// #numberOfSuperNodes
-						insertData.setDouble(6,
-								Double.parseDouble(parameters[5]));// dampening
-						insertData.setDouble(7,
-								Double.parseDouble(parameters[6]));// epsilon
-						insertData.setInt(8, Integer.parseInt(parameters[7]));// #iteration
-						insertData.setString(9, parameters[8]);// program
-						if (!parameters[9].equals("-")) {// time taken
-							insertData.setInt(10,
-									Integer.parseInt(parameters[9]));
-						} else {
-							insertData.setNull(10, java.sql.Types.NULL);
-						}
-
-						insertData.execute();
-						System.out
-						.println("testdata was loaded into the database.");
-					}
-				}
+			insertData.setString(1, parameters[0]);// start_time
+			insertData.setString(2, inputTokens[inputTokens.length - 1]);// input
+			insertData.setString(3, parameters[2]);// output
+			insertData.setInt(4, Integer.parseInt(parameters[3]));// #subtasks
+			insertData.setInt(5, Integer.parseInt(parameters[4]));// #numberOfSuperNodes
+			insertData.setDouble(6, Double.parseDouble(parameters[5]));// dampening
+			insertData.setDouble(7, Double.parseDouble(parameters[6]));// epsilon
+			insertData.setInt(8, Integer.parseInt(parameters[7]));// #iteration
+			insertData.setString(9, parameters[8]);// program
+			if (!parameters[9].equals("-")) {// time taken
+				insertData.setInt(10, Integer.parseInt(parameters[9]));
+			} else {
+				insertData.setNull(10, java.sql.Types.NULL);
 			}
-		} catch (SQLException sex) {
-			sex.printStackTrace();
-		} catch (FileNotFoundException fnf) {
-			fnf.printStackTrace();
-		} catch (IOException ioe) {
-			ioe.printStackTrace();
-		} finally {
-			try {
-				if (br != null) {
-					br.close();
-				}
-				if (rs != null) {
-					rs.close();
-				}
-				if (insertData != null) {
-					insertData.close();
-				}
-			} catch (IOException ioe2) {
-				ioe2.printStackTrace();
-			} catch (SQLException sex2) {
-				sex2.printStackTrace();
-			}
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 
-	public static void getPageRankRuntimeData(DbManager dbm, String tableName,
+	public void getPageRankRuntimeData(String tableName,
 			LinkedList<String> inputs, String dampening, String epsilon,
 			LinkedList<String> iterations, LinkedList<Integer> numOfTasks,
 			LinkedList<String> programs, LinkedList<LinkedList<Double>> times,
@@ -147,7 +72,7 @@ public class PageRankConnection {
 
 		// TODO set numberofsupernodes!!!
 
-		if (dbm.existsTable(tableName)) {
+		if (dm.existsTable(tableName)) {
 
 			String whereFromClause = " from " + tableName + " where dampening="
 					+ dampening + " and epsilon=" + epsilon + " and (";
@@ -178,7 +103,7 @@ public class PageRankConnection {
 							+ " group by iterations order by iterations asc";
 					System.out.println(timesQuery + "\n");
 
-					st = dbm.getCON().createStatement();
+					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
 					while (rs.next()) {
 						labels.set(index + 1, programName + ": " + numTaskCount
@@ -205,15 +130,15 @@ public class PageRankConnection {
 		}
 	}
 
-	public static void getPageRankDeviationMultipleInput(DbManager dbm,
-			String tableName, LinkedList<String> inputs, String dampening,
-			String epsilon, LinkedList<String> iterations,
-			LinkedList<Integer> numOfTasks, LinkedList<String> programs,
+	public void getPageRankDeviationMultipleInput(String tableName,
+			LinkedList<String> inputs, String dampening, String epsilon,
+			LinkedList<String> iterations, LinkedList<Integer> numOfTasks,
+			LinkedList<String> programs,
 			LinkedList<LinkedList<Double>> deviations) throws RuntimeException {
 
 		// TODO set numberofsupernodes!!!
 
-		if (dbm.existsTable(tableName)) {
+		if (dm.existsTable(tableName)) {
 
 			String whereFromClause = " from " + tableName + " where dampening="
 					+ dampening + " and epsilon=" + epsilon + " and (";
@@ -244,7 +169,7 @@ public class PageRankConnection {
 							+ " group by iterations order by iterations asc";
 					System.out.println(timesQuery + "\n");
 
-					st = dbm.getCON().createStatement();
+					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
 					while (rs.next()) {
 						deviations.get(index + 1).add(rs.getDouble(2) / 1000);
@@ -268,5 +193,5 @@ public class PageRankConnection {
 			System.out.println("The table does not exists!");
 		}
 	}
-}
 
+}

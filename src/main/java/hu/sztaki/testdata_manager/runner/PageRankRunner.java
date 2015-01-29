@@ -1,11 +1,8 @@
 package hu.sztaki.testdata_manager.runner;
 
 import hu.sztaki.testdata_manager.chartapi.ChartApiManager;
-import hu.sztaki.testdata_manager.dbmanager.AlsConnection;
 import hu.sztaki.testdata_manager.dbmanager.DbManager;
-import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection2;
 import hu.sztaki.testdata_manager.dbmanager.PageRankConnection;
-import hu.sztaki.testdata_manager.dbmanager.PageRankConnection2;
 
 import java.util.LinkedList;
 
@@ -16,7 +13,7 @@ public class PageRankRunner extends TestRunner {
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);
 
-		PageRankConnection2 pagerank_conn = new PageRankConnection2(dm);
+		PageRankConnection pagerank_conn = new PageRankConnection(dm);
 		ChartApiManager cam = new ChartApiManager();
 
 		// create table
