@@ -1,14 +1,16 @@
 package hu.sztaki.testdata_manager.runner;
 
 import hu.sztaki.testdata_manager.chartapi.ChartApiManager;
-import hu.sztaki.testdata_manager.dbmanager.DbManager;
-import hu.sztaki.testdata_manager.dbmanager.PageRankConnection;
+import hu.sztaki.testdata_manager.database.DatabaseManager;
+import hu.sztaki.testdata_manager.database.connections.PageRankConnection;
 
 import java.util.LinkedList;
 
 public class PageRankRunner extends TestRunner {
 
-	public static void run(String[] args, DbManager dm) {
+	//TODO: enable logging
+	
+	public static void run(String[] args, DatabaseManager dm) {
 
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);

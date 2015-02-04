@@ -1,29 +1,28 @@
-package hu.sztaki.testdata_manager.dbmanager;
+package hu.sztaki.testdata_manager.database.connections;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import hu.sztaki.testdata_manager.database.DatabaseManager;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 
 public class PageRankConnection extends DatabaseConnection {
 
-	public PageRankConnection(DbManager dm) {
+	public PageRankConnection(DatabaseManager dm) {
 		super(dm);
 	}
 
 	public void createTable(String tableName) {
-		// NOTE: if tableName is not given then a daily table is created!
-		String tableToInsert = (tableName.equals("") ? "MULTICAST_ALS_TEST_"
-				+ dm.queryDate() : tableName);
-		// TODO: check whether table exist if yes, then stdout some msg
+		String tableToInsert = "";
+		if (tableName.equals("")) {
+			tableToInsert = "PAGERANK_TEST_" + dm.queryDate();
+			LOG.warn("Tablename was not given so a default daily table was created with name: '"
+					+ tableToInsert + "'");
+		} else {
+			tableToInsert = tableName;
+		}
 
 		String queryCreate = "CREATE TABLE IF NOT EXISTS "
 				+ tableToInsert
@@ -37,7 +36,7 @@ public class PageRankConnection extends DatabaseConnection {
 				+ tableName
 				+ "(START_TIME,INPUT,OUTPUT,NUMOFTASKS, NUMOFSUPERNODES,DAMPENING,EPSILON,ITERATIONS,PROGRAM,TIME_TAKEN)"
 				+ " values (str_to_date(?,'%Y-%m-%d %T'),?,?,?,?,?,?,?,?,?)";
-		insertData(tableName, insertQuery, "#Parameters of the als job:", 10);
+		insertData(tableName, insertQuery, "#Parameters of the pagerank job:", 10);
 	}
 
 	@Override
@@ -101,7 +100,7 @@ public class PageRankConnection extends DatabaseConnection {
 							+ " numoftasks=" + numTaskCount + " and input='"
 							+ inputName + "'"
 							+ " group by iterations order by iterations asc";
-					System.out.println(timesQuery + "\n");
+					// System.out.println(timesQuery + "\n");
 
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
@@ -126,7 +125,8 @@ public class PageRankConnection extends DatabaseConnection {
 				}
 			}
 		} else {
-			System.out.println("The table does not exists!");
+			LOG.error("The given table '" + tableName
+					+ "' does not exists! So the query could not be executed.");
 		}
 	}
 
@@ -167,7 +167,7 @@ public class PageRankConnection extends DatabaseConnection {
 							+ " numoftasks=" + numTaskCount + " and input='"
 							+ inputName + "'"
 							+ " group by iterations order by iterations asc";
-					System.out.println(timesQuery + "\n");
+					// System.out.println(timesQuery + "\n");
 
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
@@ -190,7 +190,8 @@ public class PageRankConnection extends DatabaseConnection {
 				}
 			}
 		} else {
-			System.out.println("The table does not exists!");
+			LOG.error("The given table '" + tableName
+					+ "' does not exists! So the query could not be executed.");
 		}
 	}
 

@@ -12,6 +12,8 @@ import java.util.LinkedList;
 //TODO: set error msg if number of programs exceed limit!!!
 //TODO: chart of failed jobs
 
+//TODO: enable logging!!!
+
 public class ChartApiManager {
 
 	private static String SAMPLE_PATH;

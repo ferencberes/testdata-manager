@@ -1,4 +1,6 @@
-package hu.sztaki.testdata_manager.dbmanager;
+package hu.sztaki.testdata_manager.database.connections;
+
+import hu.sztaki.testdata_manager.database.DatabaseManager;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,16 +11,21 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public abstract class DatabaseConnection {
-	
-	protected DbManager dm;
-	
-	public DatabaseConnection(DbManager dbManager) {
-		dm=dbManager;
+public abstract class DatabaseConnection implements DatabaseConnectionBase {
+
+	protected DatabaseManager dm;
+	protected static final Logger LOG = LoggerFactory
+			.getLogger(DatabaseConnection.class);
+
+	public DatabaseConnection(DatabaseManager dbManager) {
+		dm = dbManager;
 	}
 
-	public void createTable(String tableToInsert, String queryCreate, String message) {
+	public void createTable(String tableToInsert, String queryCreate,
+			String message) {
 		Statement createTable = null;
 		ResultSet rs = null;
 
@@ -28,9 +35,9 @@ public abstract class DatabaseConnection {
 					+ tableToInsert
 					+ "(ID INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, START_TIME DATE NOT NULL, INPUT VARCHAR(200) NOT NULL, OUTPUT VARCHAR(200), SOLVER VARCHAR(10), NUMOFTASKS INTEGER, LAMBDA DOUBLE, FEATURE_K INTEGER NOT NULL, ITERATIONS INTEGER, PROGRAM VARCHAR(50) NOT NULL, MC_VERSION INTEGER,TIME_TAKEN INTEGER, CONSTRAINT "
 					+ tableToInsert + "_PK PRIMARY KEY( ID ))";
-			// System.out.println(queryCreate);
+
 			createTable.executeUpdate(queryCreate);
-			System.out.println(message+" table is created.");
+			LOG.info("SUCCESS: " + message + " table is created.");
 
 		} catch (SQLException sex) {
 			sex.printStackTrace();
@@ -47,8 +54,9 @@ public abstract class DatabaseConnection {
 			}
 		}
 	}
-	
-	public void insertData(String tableName, String insertQuery, String logHeader, int numOfParams) {
+
+	public void insertData(String tableName, String insertQuery,
+			String logHeader, int numOfParams) {
 		BufferedReader br = null;
 		ResultSet rs = null;
 		PreparedStatement insertData = null;
@@ -57,19 +65,26 @@ public abstract class DatabaseConnection {
 		String[] actualLog;
 		String[] parameters = new String[numOfParams];
 
+		boolean existTable = dm.existsTable(tableName);
+		if(existTable){
+		
 		try {
+			
 			File[] logs = dm.getLOGDIR().listFiles();
 
 			// NOTE: suppose that in logDir there are only new logs
+			LOG.info("Loading log files STARTED.");
 			for (File i : logs) {
-				System.out.println(i.getCanonicalPath());				
+				LOG.info("Loading in log file " + i.getCanonicalPath()
+						+ " STARTED.");
+				int numOfInsertedRecord = 0;
 				br = new BufferedReader(new FileReader(i));
 				insertData = dm.getCON().prepareStatement(insertQuery);
 				while ((line = br.readLine()) != null) {
-					
+
 					if (line.matches(logHeader)) {
 						actualLog = new String[numOfParams];
-						
+
 						for (int j = 0; j < numOfParams; j++) {
 							line = br.readLine();
 							actualLog[j] = line;
@@ -83,12 +98,14 @@ public abstract class DatabaseConnection {
 
 						parseLines(parameters, insertData);
 						insertData.execute();
-						System.out
-						.println("testdata was loaded into the database.");
-						
+						numOfInsertedRecord++;
 					}
 				}
+				LOG.info("Loading in log file " + i.getCanonicalPath()
+						+ " FINISHED: " + numOfInsertedRecord
+						+ " record was inserted into table '" + tableName + "'.");
 			}
+			LOG.info("Loading log files FINISHED.");
 		} catch (SQLException sex) {
 			sex.printStackTrace();
 		} catch (FileNotFoundException fnf) {
@@ -112,9 +129,12 @@ public abstract class DatabaseConnection {
 				sex2.printStackTrace();
 			}
 		}
+		} else {
+			LOG.error("The given table '"+tableName+"' does not exists! So insertion could not be made.");
+		}
 	}
-	
-	public abstract void parseLines(String[] parameters, PreparedStatement insertData);
+
+	public abstract void parseLines(String[] parameters,
+			PreparedStatement insertData);
 
 }
-

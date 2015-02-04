@@ -1,4 +1,4 @@
-package hu.sztaki.testdata_manager.dbmanager;
+package hu.sztaki.testdata_manager.database;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,9 +13,15 @@ import java.sql.Statement;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DbManager {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-	//TODO: should I introduce final or static members?
+public class DatabaseManager {
+
+	protected static final Logger LOG = LoggerFactory
+			.getLogger(DatabaseManager.class);
+
+	// TODO: should I introduce final or static members?
 	private Connection CON;
 	private String CONFIG_DIR;
 	private String DB_USER;
@@ -25,10 +31,12 @@ public class DbManager {
 	private String DB_NAME;
 	private String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	private File LOGDIR;
-	
-	public DbManager(String configDir) {
+
+	public DatabaseManager(String configDir) {
+		LOG.info("DataBaseManager configuration STARTED.");
 		CONFIG_DIR = configDir;
 		CON = configure();
+		LOG.info("DataBaseManager configuration FINISHED.");
 	}
 
 	private Connection configure() {
@@ -138,6 +146,7 @@ public class DbManager {
 		} catch (SQLException sex) {
 			sex.printStackTrace();
 		}
+		LOG.info("SUCCESS: DataBaseManager was closed.");
 	}
 
 	public String queryDate() {
@@ -209,12 +218,14 @@ public class DbManager {
 				break;
 			}
 		}
+		if (!tableExists) {
+			LOG.warn(tableName + " table does not exists!");
+		}
 		return tableExists;
 	}
 
 	public void dropTable(String tableName) {
 		Statement stmt = null;
-		// TODO: if not exists stdout some msg
 		String queryDrop = "DROP TABLE IF EXISTS " + tableName;
 		try {
 			stmt = CON.createStatement();
@@ -229,10 +240,10 @@ public class DbManager {
 			} catch (SQLException sex) {
 				sex.printStackTrace();
 			}
-			System.out.println(tableName + " table is dropped.");
+			LOG.info("SUCCESS:+)" + tableName + " table was dropped.");
 		}
 	}
-	
+
 	public File getLOGDIR() {
 		return LOGDIR;
 	}
@@ -242,4 +253,3 @@ public class DbManager {
 	}
 
 }
-

@@ -20,7 +20,7 @@ mv ./logs/als ./logs/newlogs
 ./scripts/createTable.sh als als_sample_table
 
 #list existing tables
-./scripts/listTables.sh
+#./scripts/listTables.sh
 
 #insert data into the newly created table
 ./scripts/insertTable.sh als als_sample_table

@@ -1,15 +1,16 @@
 package hu.sztaki.testdata_manager.runner;
 
 import hu.sztaki.testdata_manager.chartapi.ChartApiManager;
-import hu.sztaki.testdata_manager.dbmanager.AlsConnection;
-import hu.sztaki.testdata_manager.dbmanager.DbManager;
-
+import hu.sztaki.testdata_manager.database.DatabaseManager;
+import hu.sztaki.testdata_manager.database.connections.AlsConnection;
 
 import java.util.LinkedList;
 
 public class AlsRunner extends TestRunner {
 
-	public static void run(String[] args, DbManager dm) {
+	//TODO: enable logging!!!
+	
+	public static void run(String[] args, DatabaseManager dm) {
 
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);

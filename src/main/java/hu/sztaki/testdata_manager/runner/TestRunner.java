@@ -1,7 +1,6 @@
 package hu.sztaki.testdata_manager.runner;
 
-import hu.sztaki.testdata_manager.dbmanager.DbManager;
-import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection;
+import hu.sztaki.testdata_manager.database.DatabaseManager;
 
 import java.util.LinkedList;
 
@@ -11,6 +10,8 @@ import java.util.LinkedList;
 //TODO: exception handling if chart and config directories does not exists!
 
 public class TestRunner {
+	
+	//TODO: enable logging
 
 	protected static String DB_CONFIG_DIR;
 	protected static String CHART_SAMPLE_PATH;
@@ -27,7 +28,7 @@ public class TestRunner {
 		CHART_TARGET_PATH = args[0] + "/charts";
 		CHART_SAMPLE_PATH = args[0] + "/resource/chart_sample";
 
-		DbManager dm = new DbManager(DB_CONFIG_DIR);
+		DatabaseManager dm = new DatabaseManager(DB_CONFIG_DIR);
 
 		/*
 		 * arg[1] options: list create drop chart

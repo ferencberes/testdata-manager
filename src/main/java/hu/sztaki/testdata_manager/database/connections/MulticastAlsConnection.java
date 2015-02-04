@@ -1,10 +1,7 @@
-package hu.sztaki.testdata_manager.dbmanager;
+package hu.sztaki.testdata_manager.database.connections;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import hu.sztaki.testdata_manager.database.DatabaseManager;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,6 +9,9 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MulticastAlsConnection extends DatabaseConnection {
 
@@ -32,7 +32,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 		VARIABLES.put("time_taken", false);
 	}
 
-	public MulticastAlsConnection(DbManager dm) {
+	public MulticastAlsConnection(DatabaseManager dm) {
 		super(dm);
 	}
 
@@ -65,10 +65,14 @@ public class MulticastAlsConnection extends DatabaseConnection {
 	}
 
 	public void createTable(String tableName) {
-		// NOTE: if tableName is not given then a daily table is created!
-		String tableToInsert = (tableName.equals("") ? "MULTICAST_ALS_TEST_"
-				+ dm.queryDate() : tableName);
-		// TODO: check whether table exist if yes, then stdout some msg
+		String tableToInsert = "";
+		if (tableName.equals("")) {
+			tableToInsert = "MULTICAST_ALS_TEST_" + dm.queryDate();
+			LOG.warn("Tablename was not given so a default daily table was created with name: '"
+					+ tableToInsert + "'");
+		} else {
+			tableToInsert = tableName;
+		}
 
 		String queryCreate = "CREATE TABLE IF NOT EXISTS "
 				+ tableToInsert
@@ -150,7 +154,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 							+ " numoftasks=" + numTaskCount + " and input='"
 							+ inputName + "' and mc_version=" + mc_version
 							+ " group by iterations order by iterations asc";
-					System.out.println(timesQuery + "\n");
+					// System.out.println(timesQuery + "\n");
 
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
@@ -175,7 +179,8 @@ public class MulticastAlsConnection extends DatabaseConnection {
 				}
 			}
 		} else {
-			System.out.println("The table does not exists!");
+			LOG.error("The given table '" + tableName
+					+ "' does not exists! So the query could not be executed.");
 		}
 	}
 
@@ -218,7 +223,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 							+ " numoftasks=" + numTaskCount + " and input='"
 							+ inputName + "' and mc_version=" + mc_version
 							+ " group by iterations order by iterations asc";
-					System.out.println(timesQuery + "\n");
+					// System.out.println(timesQuery + "\n");
 
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
@@ -242,7 +247,8 @@ public class MulticastAlsConnection extends DatabaseConnection {
 				}
 			}
 		} else {
-			System.out.println("The table does not exists!");
+			LOG.error("The given table '" + tableName
+					+ "' does not exists! So the query could not be executed.");
 		}
 	}
 

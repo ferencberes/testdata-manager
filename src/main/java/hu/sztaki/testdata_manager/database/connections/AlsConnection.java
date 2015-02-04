@@ -1,24 +1,28 @@
-package hu.sztaki.testdata_manager.dbmanager;
+package hu.sztaki.testdata_manager.database.connections;
+
+import hu.sztaki.testdata_manager.database.DatabaseManager;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 
 public class AlsConnection extends DatabaseConnection {
 
-	public AlsConnection(DbManager dm) {
+	public AlsConnection(DatabaseManager dm) {
 		super(dm);
 	}
 
 	public void createTable(String tableName) {
-		// NOTE: if tableName is not given then a daily table is created!
-		String tableToInsert = (tableName.equals("") ? "ALS_TEST_"
-				+ dm.queryDate() : tableName);
-		// TODO: check whether table exist if yes, then stdout some msg
+		String tableToInsert = "";
+		if (tableName.equals("")) {
+			tableToInsert = "ALS_TEST_" + dm.queryDate();
+			LOG.warn("Tablename was not given so a default daily table was created with name: '"
+					+ tableToInsert + "'");
+		} else {
+			tableToInsert = tableName;
+		}
 
 		String queryCreate = "CREATE TABLE IF NOT EXISTS "
 				+ tableToInsert
@@ -98,13 +102,11 @@ public class AlsConnection extends DatabaseConnection {
 							+ " numoftasks=" + numTaskCount + " and input='"
 							+ inputName + "'"
 							+ " group by iterations order by iterations asc";
-					System.out.println(timesQuery + "\n");
+					// System.out.println(timesQuery + "\n");
 
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
-					// int numOfIter = 0;
 					while (rs.next()) {
-						// numOfIter++;
 						labels.set(index + 1, programName + ": " + numTaskCount
 								+ " subTasks, " + inputName);
 						times.get(index + 1).add(rs.getDouble(2) / 1000 / 60);
@@ -125,7 +127,8 @@ public class AlsConnection extends DatabaseConnection {
 				}
 			}
 		} else {
-			System.out.println("The table does not exists!");
+			LOG.error("The given table '" + tableName
+					+ "' does not exists! So the query could not be executed.");
 		}
 	}
 
@@ -165,7 +168,7 @@ public class AlsConnection extends DatabaseConnection {
 							+ " numoftasks=" + numTaskCount + " and input='"
 							+ inputName + "'"
 							+ " group by iterations order by iterations asc";
-					System.out.println(timesQuery + "\n");
+					// System.out.println(timesQuery + "\n");
 
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
@@ -189,7 +192,8 @@ public class AlsConnection extends DatabaseConnection {
 				}
 			}
 		} else {
-			System.out.println("The table does not exists!");
+			LOG.error("The given table '" + tableName
+					+ "' does not exists! So the query could not be executed.");
 		}
 	}
 

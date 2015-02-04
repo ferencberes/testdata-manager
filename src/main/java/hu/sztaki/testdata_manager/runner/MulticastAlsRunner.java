@@ -1,13 +1,21 @@
 package hu.sztaki.testdata_manager.runner;
 
 import hu.sztaki.testdata_manager.chartapi.ChartApiManager;
-import hu.sztaki.testdata_manager.dbmanager.DbManager;
-import hu.sztaki.testdata_manager.dbmanager.MulticastAlsConnection;
+import hu.sztaki.testdata_manager.database.DatabaseManager;
+import hu.sztaki.testdata_manager.database.connections.DatabaseConnection;
+import hu.sztaki.testdata_manager.database.connections.MulticastAlsConnection;
+
 import java.util.LinkedList;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MulticastAlsRunner extends TestRunner {
 
-	public static void run(String[] args, DbManager dm) {
+	private static final Logger LOG = LoggerFactory
+			.getLogger(MulticastAlsRunner.class);
+
+	public static void run(String[] args, DatabaseManager dm) {
 
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
 				CHART_TARGET_PATH);
@@ -70,13 +78,13 @@ public class MulticastAlsRunner extends TestRunner {
 					cam.generateCharts(chartName, labels, times, deviations);
 				}
 			} else {
-				System.out.println("There are missing parameters!");
-				System.out
-						.println("chart chartname tablename qinput lambda k_feature program1:numtask1:input1|program2:numtask2:input2|...");
+				LOG.error("There are missing parameters!");
+//				System.out
+//						.println("chart chartname tablename qinput lambda k_feature program1:numtask1:input1|program2:numtask2:input2|...");
 			}
 
 		} else {
-			System.out.println("There is no such command");
+			LOG.error("There is no such command as '"+args[1]+"'. Available options are 'list', 'create', 'drop', 'chart'.");
 		}
 	}
 }
