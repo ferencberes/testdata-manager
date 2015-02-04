@@ -26,7 +26,7 @@ public class TestRunner {
 	public static void main(String[] args) {
 		DB_CONFIG_DIR = args[0] + "/config";
 		CHART_TARGET_PATH = args[0] + "/charts";
-		CHART_SAMPLE_PATH = args[0] + "/resource/chart_sample";
+		CHART_SAMPLE_PATH = args[0] + "/src/main/resources/chart_sample";
 
 		DatabaseManager dm = new DatabaseManager(DB_CONFIG_DIR);
 

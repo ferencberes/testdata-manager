@@ -10,7 +10,7 @@ cd ./../..
 
 rm -r ./logs/newlogs
 
-cp -r ./resource/log_sample/pagerank ./logs
+cp -r ./src/main/resources/log_sample/pagerank ./logs
 mv ./logs/pagerank ./logs/newlogs
 
 #drop table if exists

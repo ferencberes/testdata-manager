@@ -10,7 +10,7 @@ cd ./../..
 
 rm -r ./logs/newlogs
 
-cp -r ./resource/log_sample/multicast_als ./logs
+cp -r ./src/main/resources/log_sample/multicast_als ./logs
 mv ./logs/multicast_als ./logs/newlogs
 
 #drop table if exists
