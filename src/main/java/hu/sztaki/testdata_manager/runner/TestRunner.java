@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 //TODO: exception handling if chart and config directories does not exists!
 
 public class TestRunner {
-
+	
 	protected static final Logger LOG = LoggerFactory
 			.getLogger(TestRunner.class);
 
