@@ -78,13 +78,12 @@ public class MulticastAlsRunner extends TestRunner {
 					cam.generateCharts(chartName, labels, times, deviations);
 				}
 			} else {
-				LOG.error("There are missing parameters!");
-//				System.out
-//						.println("chart chartname tablename qinput lambda k_feature program1:numtask1:input1|program2:numtask2:input2|...");
+				LOG.error("There are missing parameters!" + getArgumentFormat());
 			}
-
-		} else {
-			LOG.error("There is no such command as '"+args[1]+"'. Available options are 'list', 'create', 'drop', 'chart'.");
 		}
+	}
+
+	private static String getArgumentFormat() {
+		return "\nUsage: chart chartname tablename solver lambda k_feature iteration1:iteration2:...:last_iteration program1:numtask1:input1:multicast_version1|program2:numtask2:input2:multicast_version2|...";
 	}
 }

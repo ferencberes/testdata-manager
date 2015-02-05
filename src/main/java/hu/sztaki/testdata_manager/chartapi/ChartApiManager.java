@@ -9,24 +9,27 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.LinkedList;
 
-//TODO: set error msg if number of programs exceed limit!!!
-//TODO: chart of failed jobs
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-//TODO: enable logging!!!
+//TODO: chart of failed jobs
 
 public class ChartApiManager {
 
+	private static final Logger LOG = LoggerFactory
+			.getLogger(ChartApiManager.class);
+
 	private static String SAMPLE_PATH;
 	private static String TARGET_PATH;
+	private static int MAX_NUMBER_OF_PROGRAMS;
 
-	private static final int maxNumOfPrograms = 6;// only six color is
-													// predefined!
 	private static final String[] colors = new String[] { "#0066FF", "#339933",
 			"#FF6600", "#FF0000", "#FFFF00", "#800000" };
 
 	public static void loadChartParameters(String samplePath, String targetPath) {
 		SAMPLE_PATH = samplePath + "/";
 		TARGET_PATH = targetPath + "/";
+		MAX_NUMBER_OF_PROGRAMS = colors.length;
 	}
 
 	public void generateCharts(String fileName, LinkedList<String> labels,
@@ -37,15 +40,19 @@ public class ChartApiManager {
 		PrintWriter pw = null;
 		String line;
 		String chartLine = "";
+		String sampleFilePath = SAMPLE_PATH + "sampleWithDev.txt";
 
 		int numOfPrograms = labels.size();
 		int numOfIterations = times.get(0).size();
 
 		try {
-			br = new BufferedReader(new FileReader(SAMPLE_PATH
-					+ "sampleWithDev.txt"));
+			LOG.info("Using '" + sampleFilePath
+					+ "' as blank sample chart for chart generation.");
+			br = new BufferedReader(new FileReader(sampleFilePath));
 			pw = new PrintWriter(new FileWriter(
 					new File(TARGET_PATH + fileName)));
+
+			LOG.info("html chart generation STARTED");
 			while ((line = br.readLine()) != null) {
 				if (line.matches("#CHART1.*")) {
 					chartLine = "[";
@@ -89,8 +96,10 @@ public class ChartApiManager {
 						pw.println(chartLine);
 						chartLine = "";
 					}
+					LOG.info("SUCCESS: runtime table inserted into chart.");
 				} else if (line.matches("#COLORS.*")) {
-					pw.println(writeColors(maxNumOfPrograms));
+					pw.println(writeColors(MAX_NUMBER_OF_PROGRAMS));
+					LOG.info("SUCCESS: color codes inserted into chart.");
 				} else if (line.matches("#CHARTDEVS.*")) {
 
 					for (int prog = 0; prog < numOfPrograms - 1; prog++) {
@@ -119,14 +128,16 @@ public class ChartApiManager {
 						// finish deviation chart script
 						pw.print(writeOthers(labels.get(prog + 1), prog));
 					}
-
+					LOG.info("SUCCESS: standard deviation tables inserted into chart.");
 				} else if (line.matches("#DIVS.*")) {
 					// write divs to scripts
 					pw.print(writeDivs(numOfPrograms - 1));
+					LOG.info("SUCCESS: html tags inserted into chart.");
 				} else {
 					pw.println(line);
 				}
 			}
+			LOG.info("html chart generation STOPPED");
 		} catch (FileNotFoundException fnf) {
 			fnf.printStackTrace();
 		} catch (IOException ioe) {
@@ -140,7 +151,7 @@ public class ChartApiManager {
 			} catch (IOException ioe2) {
 				ioe2.printStackTrace();
 			}
-			System.out.println("Chart " + fileName + " was created.");
+			LOG.info("Chart " + fileName + " was created.");
 		}
 	}
 
@@ -164,10 +175,11 @@ public class ChartApiManager {
 	public String writeColors(int id) {
 
 		String out = "colors: [";
-		if (id > maxNumOfPrograms) {
+		if (id > MAX_NUMBER_OF_PROGRAMS) {
 			throw new IllegalArgumentException(
-					"The number of programs cannot exceed " + maxNumOfPrograms
-							+ "! Only " + maxNumOfPrograms
+					"The number of programs cannot exceed "
+							+ MAX_NUMBER_OF_PROGRAMS + "! Only "
+							+ MAX_NUMBER_OF_PROGRAMS
 							+ " colors are predefined.");
 		} else {
 
@@ -203,7 +215,7 @@ public class ChartApiManager {
 		sb.append("legend: 'none',\n");
 		sb.append(writeColors(id));
 		sb.append("};\n");
-		sb.append("\nvar chartstdev"
+		sb.append("\nvar chart_stdev"
 				+ id
 				+ " = new google.visualization.ScatterChart(document.getElementById('chart_stdev"
 				+ id + "'));\n");
@@ -212,4 +224,3 @@ public class ChartApiManager {
 		return sb.toString();
 	}
 }
-

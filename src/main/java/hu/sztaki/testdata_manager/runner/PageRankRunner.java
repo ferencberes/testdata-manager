@@ -6,9 +6,12 @@ import hu.sztaki.testdata_manager.database.connections.PageRankConnection;
 
 import java.util.LinkedList;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class PageRankRunner extends TestRunner {
 
-	//TODO: enable logging
+	private static final Logger LOG = LoggerFactory.getLogger(PageRankRunner.class);
 	
 	public static void run(String[] args, DatabaseManager dm) {
 
@@ -71,13 +74,12 @@ public class PageRankRunner extends TestRunner {
 					cam.generateCharts(chartName, labels, times, deviations);
 				}
 			} else {
-				System.out.println("There are missing parameters!");
-				System.out
-						.println("chart chartname tablename qinput lambda k_feature program1:numtask1:input1|program2:numtask2:input2|...");
+				LOG.error("There are missing parameters!"+getArgumentFormat());
 			}
-
-		} else {
-			System.out.println("There is no such command");
 		}
+	}
+	
+	public static String getArgumentFormat() {
+		return "\nUsage: chart chartname tablename qinput lambda k_feature iteration1:iteration2:...:last_iteration program1:numtask1:input1|program2:numtask2:input2|...";
 	}
 }

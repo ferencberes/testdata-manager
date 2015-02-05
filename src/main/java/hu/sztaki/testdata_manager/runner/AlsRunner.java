@@ -6,10 +6,13 @@ import hu.sztaki.testdata_manager.database.connections.AlsConnection;
 
 import java.util.LinkedList;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class AlsRunner extends TestRunner {
 
-	//TODO: enable logging!!!
-	
+	public static final Logger LOG = LoggerFactory.getLogger(AlsRunner.class);
+
 	public static void run(String[] args, DatabaseManager dm) {
 
 		ChartApiManager.loadChartParameters(CHART_SAMPLE_PATH,
@@ -21,13 +24,13 @@ public class AlsRunner extends TestRunner {
 		// create table
 		if (args[1].equals("create")) {
 			if (args[3].equals("-")) {
-				 als_conn.createTable("");
+				als_conn.createTable("");
 			} else {
-				 als_conn.createTable(args[3]);
+				als_conn.createTable(args[3]);
 			}
 			// insert table
 		} else if (args[1].equals("insert")) {
-			 als_conn.insertData(args[3]);
+			als_conn.insertData(args[3]);
 
 		} else if (args[1].equals("chart")) {
 			if (args.length == 10) {
@@ -61,24 +64,22 @@ public class AlsRunner extends TestRunner {
 					times.add(new LinkedList<Double>());
 					deviations.add(new LinkedList<Double>());
 				}
-				 als_conn.getAlsRuntimeData(TableName, inputs, qInput,
-						k, lambda, iterations, numTasks, programs, times,
-						labels);
-				 als_conn.getAlsDeviationMultipleInput(TableName,
-						inputs, qInput, k, lambda, iterations, numTasks,
-						programs, deviations);
+				als_conn.getAlsRuntimeData(TableName, inputs, qInput, k,
+						lambda, iterations, numTasks, programs, times, labels);
+				als_conn.getAlsDeviationMultipleInput(TableName, inputs,
+						qInput, k, lambda, iterations, numTasks, programs,
+						deviations);
 
 				if (dm.existsTable(TableName)) {
 					cam.generateCharts(chartName, labels, times, deviations);
 				}
 			} else {
-				System.out.println("There are missing parameters!");
-				System.out
-						.println("chart chartname tablename qinput lambda k_feature program1:numtask1:input1|program2:numtask2:input2|...");
+				LOG.error("There are missing parameters!" + getArgumentFormat());
 			}
-
-		} else {
-			System.out.println("There is no such command");
 		}
+	}
+
+	private static String getArgumentFormat() {
+		return "\nUsage: chart chartname tablename qinput lambda k_feature iteration1:iteration2:...:last_iteration program1:numtask1:input1|program2:numtask2:input2|...";
 	}
 }

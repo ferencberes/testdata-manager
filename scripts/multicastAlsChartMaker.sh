@@ -2,15 +2,11 @@
 
 thisDir="$(dirname $0)"
 thisDir="$(readlink -f "$thisDir")"
-#classPath=hu.sztaki.testdata_manager.runner.TestDataManagerRunner
 classPath=hu.sztaki.testdata_manager.runner.TestRunner
 
 pushd "$thisDir"
 
-scriptDir="$(dirname "$thisDir")"
-scriptDir="$(readlink -f "$scriptDir")"
-
-mainDir="$(dirname "$scriptDir")"
+mainDir="$(dirname "$thisDir")"
 mainDir="$(readlink -f "$mainDir")"
 
 chartName=mc_als_sample_chart
@@ -25,10 +21,11 @@ programs="AlsWithMap:4:sampledb2d.csv.txt:0"
 #iterations=iter1:iter2: ...
 iterations=1
 
+echo "$mainDir"
 
 if [ "$#" == "0" ]; then
   pushd "$thisDir"
-  java -classpath ./../../target/testdata-manager-0.1-jar-with-dependencies.jar "$classPath" "$mainDir"chart multicast_als "$chartName" "$tableName" "$solver" "$lmb" "$k_feature" "$iterations" "$programs"
+  java -classpath ./../target/testdata-manager-0.1-jar-with-dependencies.jar "$classPath" "$mainDir" chart multicast_als "$chartName" "$tableName" "$solver" "$lmb" "$k_feature" "$iterations" "$programs"
   popd
 else
   echo "Parameters must be set inside the scripts!"

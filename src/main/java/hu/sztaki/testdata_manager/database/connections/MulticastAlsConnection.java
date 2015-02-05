@@ -123,7 +123,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 			LinkedList<String> labels) throws RuntimeException {
 
 		if (dm.existsTable(tableName)) {
-
+			LOG.info("Extracting average runtime data from database STARTED");
 			String whereFromClause = " from " + tableName + " where  solver='"
 					+ solver + "'" + " and feature_k=" + k + " and lambda="
 					+ lambda + " and (";
@@ -155,7 +155,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 							+ inputName + "' and mc_version=" + mc_version
 							+ " group by iterations order by iterations asc";
 					// System.out.println(timesQuery + "\n");
-
+					LOG.info("SUCCESS: sql query for average runtimes was generated program "+Integer.toString(index+1)+".");
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
 					while (rs.next()) {
@@ -163,6 +163,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 								+ " subTasks, " + inputName);
 						times.get(index + 1).add(rs.getDouble(2) / 1000 / 60);
 					}
+					LOG.info("SUCCESS: sql query for average runtimes was executed program "+Integer.toString(index+1)+".");
 				}
 			} catch (SQLException sex) {
 				sex.printStackTrace();
@@ -178,6 +179,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 					sex2.printStackTrace();
 				}
 			}
+			LOG.info("Extracting average runtime data from database FINISHED");
 		} else {
 			LOG.error("The given table '" + tableName
 					+ "' does not exists! So the query could not be executed.");
@@ -192,7 +194,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 			LinkedList<LinkedList<Double>> deviations) throws RuntimeException {
 
 		if (dm.existsTable(tableName)) {
-
+			LOG.info("Extracting standard deviations data from database STARTED");
 			String whereFromClause = " from " + tableName + " where  solver='"
 					+ solver + "'" + " and feature_k=" + k + " and lambda="
 					+ lambda + " and (";
@@ -224,13 +226,14 @@ public class MulticastAlsConnection extends DatabaseConnection {
 							+ inputName + "' and mc_version=" + mc_version
 							+ " group by iterations order by iterations asc";
 					// System.out.println(timesQuery + "\n");
-
+					LOG.info("SUCCESS: sql query for standard deviations was generated program "+Integer.toString(index+1)+".");
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
 					while (rs.next()) {
 						deviations.get(index + 1).add(rs.getDouble(2) / 1000);
 
 					}
+					LOG.info("SUCCESS: sql query for standard deviations was executed program "+Integer.toString(index+1)+".");
 				}
 			} catch (SQLException sex) {
 				sex.printStackTrace();
@@ -246,6 +249,7 @@ public class MulticastAlsConnection extends DatabaseConnection {
 					sex2.printStackTrace();
 				}
 			}
+			LOG.info("Extracting standard deviations data from database FINISHED");
 		} else {
 			LOG.error("The given table '" + tableName
 					+ "' does not exists! So the query could not be executed.");

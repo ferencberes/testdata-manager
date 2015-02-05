@@ -36,7 +36,8 @@ public class PageRankConnection extends DatabaseConnection {
 				+ tableName
 				+ "(START_TIME,INPUT,OUTPUT,NUMOFTASKS, NUMOFSUPERNODES,DAMPENING,EPSILON,ITERATIONS,PROGRAM,TIME_TAKEN)"
 				+ " values (str_to_date(?,'%Y-%m-%d %T'),?,?,?,?,?,?,?,?,?)";
-		insertData(tableName, insertQuery, "#Parameters of the pagerank job:", 10);
+		insertData(tableName, insertQuery, "#Parameters of the pagerank job:",
+				10);
 	}
 
 	@Override
@@ -72,7 +73,7 @@ public class PageRankConnection extends DatabaseConnection {
 		// TODO set numberofsupernodes!!!
 
 		if (dm.existsTable(tableName)) {
-
+			LOG.info("Extracting average runtime data from database STARTED");
 			String whereFromClause = " from " + tableName + " where dampening="
 					+ dampening + " and epsilon=" + epsilon + " and (";
 
@@ -101,7 +102,7 @@ public class PageRankConnection extends DatabaseConnection {
 							+ inputName + "'"
 							+ " group by iterations order by iterations asc";
 					// System.out.println(timesQuery + "\n");
-
+					LOG.info("SUCCESS: sql query for average runtimes was generated for program "+Integer.toString(index+1)+".");
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
 					while (rs.next()) {
@@ -109,6 +110,7 @@ public class PageRankConnection extends DatabaseConnection {
 								+ " subTasks, " + inputName);
 						times.get(index + 1).add(rs.getDouble(2) / 1000 / 60);
 					}
+					LOG.info("SUCCESS: sql query for average runtimes was executed for program "+Integer.toString(index+1)+".");
 				}
 			} catch (SQLException sex) {
 				sex.printStackTrace();
@@ -124,6 +126,7 @@ public class PageRankConnection extends DatabaseConnection {
 					sex2.printStackTrace();
 				}
 			}
+			LOG.info("Extracting average runtime data from database FINISHED");
 		} else {
 			LOG.error("The given table '" + tableName
 					+ "' does not exists! So the query could not be executed.");
@@ -139,7 +142,7 @@ public class PageRankConnection extends DatabaseConnection {
 		// TODO set numberofsupernodes!!!
 
 		if (dm.existsTable(tableName)) {
-
+			LOG.info("Extracting standard deviations data from database STARTED");
 			String whereFromClause = " from " + tableName + " where dampening="
 					+ dampening + " and epsilon=" + epsilon + " and (";
 
@@ -168,12 +171,13 @@ public class PageRankConnection extends DatabaseConnection {
 							+ inputName + "'"
 							+ " group by iterations order by iterations asc";
 					// System.out.println(timesQuery + "\n");
-
+					LOG.info("SUCCESS: sql query for standard deviations was generated for program "+Integer.toString(index+1)+".");
 					st = dm.getCON().createStatement();
 					rs = st.executeQuery(timesQuery);
 					while (rs.next()) {
 						deviations.get(index + 1).add(rs.getDouble(2) / 1000);
 					}
+					LOG.info("SUCCESS: sql query for standard deviations was executed for program "+Integer.toString(index+1)+".");
 				}
 			} catch (SQLException sex) {
 				sex.printStackTrace();
@@ -189,6 +193,7 @@ public class PageRankConnection extends DatabaseConnection {
 					sex2.printStackTrace();
 				}
 			}
+			LOG.info("Extracting standard deviations data from database FINISHED");
 		} else {
 			LOG.error("The given table '" + tableName
 					+ "' does not exists! So the query could not be executed.");
